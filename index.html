@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KONAMI CODE</title>
+</head>
+<body>
+
+    <video src="video/particles.mp4" id ="myVideo" autoplay ></video>
+
+    <div class="content">
+        
+        <h2>KEY SEQUENCE DETECTION</h2>    
+        <h3>Try typing the word 'easteregg'.</h3>
+        <h3 id="easteregg"></h3>
+
+    </div>
+    
+
+
+<script>
+ 
+ const pressed=[];
+ const secretCode= 'easteregg';
+
+ function show()
+ {
+    document.getElementById("easteregg").innerHTML = "YOU FOUND THE EASTER EGG!";
+    playVid();
+ }
+
+   const vid=document.getElementById("myVideo");
+
+    function playVid() 
+    { 
+        vid.play();     
+    }
+
+
+ window.addEventListener('keyup', (e) => {
+
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.lenght);
+
+    if(pressed.join('').includes(secretCode))
+    {
+        console.log("cool");
+        show();
+    }
+    console.log(pressed);
+
+ });
+
+</script>
+    
+</body>
+</html>
