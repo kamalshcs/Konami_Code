@@ -1,6 +1,4 @@
-/* font */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap');
 body {
   margin: 0;
 }
@@ -28,12 +26,11 @@ p {
 
 .content {
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Texturina', serif;
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  /* background: #1b1e30; */
   color: #f1f1f1;
-  width: 40%;
+  width: 45%;
   padding: 60px 15px;
   border-radius: 5px;
 }
